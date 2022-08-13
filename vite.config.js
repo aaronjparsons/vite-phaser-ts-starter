@@ -1,4 +1,7 @@
-export default {
+import { defineConfig } from 'vite';
+const path = require('path')
+
+export default defineConfig({
   // Define `base` because this deploys to user.github.io/repo-name/
   base: './',
   build: {
@@ -6,4 +9,10 @@ export default {
     // "Local data URIs are not supported"
     assetsInlineLimit: 0
   },
-}
+  resolve:{
+    alias:{
+      '@src' : path.resolve(__dirname, './src'),
+      '@assets' : path.resolve(__dirname, './assets'),
+    },
+  },
+})

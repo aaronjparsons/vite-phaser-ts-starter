@@ -1,6 +1,6 @@
-import 'phaser';
-import particleUrl from '../assets/particle.png';
-import gaspUrl from '../assets/gasp.mp3';
+import Phaser from 'phaser';
+import particleUrl from '@assets/particle.png';
+import gaspUrl from '@assets/gasp.mp3';
 
 export class MenuScene extends Phaser.Scene {
   private startKey!: Phaser.Input.Keyboard.Key;
