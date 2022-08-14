@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { Scenes } from '@src/constants';
+import ShipEntity from '@src/Entities/ShipEntity';
 
 export default class Game extends Phaser.Scene {
     constructor() {
@@ -15,6 +16,9 @@ export default class Game extends Phaser.Scene {
             fontSize: '60px',
             fontFamily: "Helvetica",
         });
+
+        const Ship = new ShipEntity(this, 400, 450);
+        this.add.existing(Ship);
     }
 
     update() {
