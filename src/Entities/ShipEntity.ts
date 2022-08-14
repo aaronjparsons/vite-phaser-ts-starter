@@ -16,7 +16,7 @@ export default class ShipEntity extends Phaser.GameObjects.Container {
         const body = this.body as Phaser.Physics.Arcade.Body;
         body.setSize(sprite.width, sprite.height);
         body.setCollideWorldBounds(true);
-        body.setOffset(sprite.width  * -0.5);
+        body.setOffset(sprite.width * -0.5);
 
         this.cursors = scene.input.keyboard.createCursorKeys();
     }
